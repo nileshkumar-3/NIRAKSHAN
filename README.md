@@ -24,7 +24,6 @@ never takes action against another person on your behalf.
 - [Demo mode (for judges)](#demo-mode-for-judges)
 - [Tech stack](#tech-stack)
 - [Privacy and consent](#privacy-and-consent)
-- [Legacy prototype](#legacy-prototype)
 - [License](#license)
 
 ---
@@ -222,13 +221,6 @@ History API — so the competition demo installs and runs with no network access
 - The extension stores a **local action log** of your own button presses. It records the domain
   and the action — never page content.
 - **Report** only opens the official portal in a new tab. NIRAKSHAN never submits a report for you.
-
----
-
-## Legacy prototype
-
-The root `index.html`, `app.js`, and `styles.css` are an earlier single-file vanilla-JS prototype,
-kept for reference. **The current application is `web/`.**
 
 ---
 
