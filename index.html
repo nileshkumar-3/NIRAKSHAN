@@ -1,0 +1,1408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NIRAKSHAN | Digital Safety Shield for Women</title>
+  <meta name="description" content="NIRAKSHAN is an antivirus for women's online safety. Proactive AI threat defense against deepfakes, hidden Bluetooth trackers, and digital harassment.">
+  <meta name="keywords" content="digital safety, women safety, deepfake protection, anti-stalking, bluetooth tracker detector, chat auditor, cybersecurity">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%238b5cf6'><path d='M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5zm0 2.18l7 3.89v5.93c0 4.54-3.1 8.79-7 9.88-3.9-1.09-7-5.34-7-9.88V8.07l7-3.89zM11 7h2v6h-2zm0 8h2v2h-2z'/></svg>" type="image/svg+xml">
+
+  <!-- Google Fonts: Inter, Plus Jakarta Sans & JetBrains Mono for telemetry -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+  <!-- Cyber Background Canvas -->
+  <canvas id="cyber-grid-canvas" class="bg-canvas"></canvas>
+
+  <!-- Sticky Cyber Header / Navigation -->
+  <header class="navbar-wrapper" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="brand-logo" aria-label="NIRAKSHAN Home">
+        <div class="logo-shield">
+          <svg class="shield-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <path d="m9 12 2 2 4-4" stroke="#06b6d4" stroke-width="2.5"/>
+          </svg>
+          <span class="shield-pulse"></span>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">NIRAKSHAN<span class="brand-tld">.AI</span></span>
+          <span class="brand-sub">DIGITAL SAFETY SHIELD</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" id="navMenu">
+        <a href="#problem" class="nav-link"><span class="nav-dot"></span>The Problem</a>
+        <a href="#solution" class="nav-link"><span class="nav-dot"></span>Solutions</a>
+        <a href="#live-demo" class="nav-link demo-highlight"><span class="pulse-indicator"></span>Live Demos</a>
+        <a href="#how-it-works" class="nav-link">How It Works</a>
+        <a href="#comparison" class="nav-link">Why Nirakshan</a>
+        <a href="#tech-stack" class="nav-link">Tech Stack</a>
+        <a href="#team" class="nav-link">Team</a>
+      </nav>
+
+      <!-- Nav CTA & Quick Emergency Actions -->
+      <div class="nav-actions">
+        <div class="status-pill tooltip" data-tooltip="Local Zero-Knowledge Sandbox Mode Active">
+          <span class="status-dot online"></span>
+          <span class="status-text">Shield Engine: <strong>Active</strong></span>
+        </div>
+        <a href="#live-demo" class="btn btn-primary btn-sm btn-glow">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          Launch Demo
+        </a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="drawer-header">
+      <div class="brand-name">NIRAKSHAN</div>
+      <button class="drawer-close" id="drawerClose">&times;</button>
+    </div>
+    <div class="drawer-links">
+      <a href="#problem" class="drawer-link">The Threat Landscape</a>
+      <a href="#solution" class="drawer-link">Our Defense Shield</a>
+      <a href="#live-demo" class="drawer-link highlight">Interactive Live Demos</a>
+      <a href="#how-it-works" class="drawer-link">How It Works (4-Step)</a>
+      <a href="#comparison" class="drawer-link">Comparison Matrix</a>
+      <a href="#tech-stack" class="drawer-link">Architecture & Tech</a>
+      <a href="#team" class="drawer-link">Leadership & Team</a>
+      <a href="#helpline" class="drawer-link helpline-callout">🚨 Cyber Helpline: 1930</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- SECTION 1: HERO -->
+    <section class="hero-section" id="hero">
+      <div class="hero-glow-orb purple-orb"></div>
+      <div class="hero-glow-orb teal-orb"></div>
+
+      <div class="container hero-container">
+        <div class="hero-content">
+          <!-- Live Threat Defense Badge -->
+          <div class="hero-badge animate-fade-in">
+            <span class="badge-icon">🛡️</span>
+            <span class="badge-text">Next-Gen AI Threat Defense & Anti-Stalking Shield</span>
+            <span class="badge-pill">v2.4 Live</span>
+          </div>
+
+          <!-- Headline -->
+          <h1 class="hero-headline animate-fade-in-up">
+            Digital Safety <span class="gradient-text">=</span> Physical Safety
+          </h1>
+
+          <!-- Tagline Callout -->
+          <div class="hero-tagline-quote animate-fade-in-up delay-1">
+            <div class="quote-bar"></div>
+            <p class="tagline-text">
+              "We taught women to be safe on streets. <span class="highlight-cyan">Who is teaching them to be safe from AI?</span>"
+            </p>
+          </div>
+
+          <!-- Subtext -->
+          <p class="hero-subtext animate-fade-in-up delay-2">
+            <strong>NIRAKSHAN</strong> is an antivirus for women's online safety. It delivers real-time client-side protection against <strong>deepfakes</strong>, <strong>hidden Bluetooth trackers</strong>, and <strong>digital harassment</strong>.
+          </p>
+
+          <!-- CTAs -->
+          <div class="hero-cta-group animate-fade-in-up delay-3">
+            <a href="#live-demo" class="btn btn-primary btn-lg btn-glow">
+              <span class="btn-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </span>
+              Try Live Demo
+            </a>
+            <a href="#how-it-works" class="btn btn-secondary btn-lg">
+              <span class="btn-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </span>
+              How It Works
+            </a>
+          </div>
+
+          <!-- Privacy & Telemetry Highlights -->
+          <div class="hero-trust-bar animate-fade-in-up delay-4">
+            <div class="trust-item">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#10b981" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+              <span>100% On-Device / Zero-Cloud Storage</span>
+            </div>
+            <div class="trust-item">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#06b6d4" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              <span>Cryptographic Watermark & BLE Radar</span>
+            </div>
+            <div class="trust-item">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#a855f7" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              <span>Instant Legal Evidence Export</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual / Cyber Telemetry Dashboard Preview -->
+        <div class="hero-visual animate-fade-in-right">
+          <div class="cyber-window">
+            <div class="window-header">
+              <div class="window-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <div class="window-title">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+                NIRAKSHAN_REALTIME_MONITOR.sys
+              </div>
+              <div class="window-badge">LIVE TELEMETRY</div>
+            </div>
+
+            <div class="window-body">
+              <!-- Live Security Status Grid -->
+              <div class="telemetry-grid">
+                <!-- Watermark Shield Tile -->
+                <div class="telemetry-card">
+                  <div class="telemetry-card-header">
+                    <span class="t-icon purple">🛡️</span>
+                    <span class="t-name">Stego Shield</span>
+                    <span class="t-status active">ARMED</span>
+                  </div>
+                  <div class="t-metric">
+                    <span class="t-value">1,420</span>
+                    <span class="t-label">Photos Encrypted</span>
+                  </div>
+                  <div class="t-bar-wrap">
+                    <div class="t-bar-fill purple" style="width: 100%;"></div>
+                  </div>
+                  <div class="t-subtext">DWT Invisible Signature Active</div>
+                </div>
+
+                <!-- BLE Tracker Scanner Tile -->
+                <div class="telemetry-card alert-state">
+                  <div class="telemetry-card-header">
+                    <span class="t-icon cyan">📡</span>
+                    <span class="t-name">BLE Proximity</span>
+                    <span class="t-status warning">1 ALERT</span>
+                  </div>
+                  <div class="t-metric">
+                    <span class="t-value text-red">AirTag Alert</span>
+                    <span class="t-label">25m Proximity</span>
+                  </div>
+                  <div class="t-bar-wrap">
+                    <div class="t-bar-fill red pulse-bar" style="width: 85%;"></div>
+                  </div>
+                  <div class="t-subtext">Persistent Tracking Detected</div>
+                </div>
+
+                <!-- Chat Harassment Tile -->
+                <div class="telemetry-card">
+                  <div class="telemetry-card-header">
+                    <span class="t-icon teal">💬</span>
+                    <span class="t-name">Chat Auditor</span>
+                    <span class="t-status active">SCANNING</span>
+                  </div>
+                  <div class="t-metric">
+                    <span class="t-value">0 Threat</span>
+                    <span class="t-label">Active Inbox Clean</span>
+                  </div>
+                  <div class="t-bar-wrap">
+                    <div class="t-bar-fill green" style="width: 20%;"></div>
+                  </div>
+                  <div class="t-subtext">NLP Model v4.1 Ready</div>
+                </div>
+              </div>
+
+              <!-- Terminal Output Stream -->
+              <div class="terminal-log-box">
+                <div class="log-header">
+                  <span class="log-title">KERNEL AUDIT LOG</span>
+                  <span class="log-cursor"></span>
+                </div>
+                <div class="log-stream" id="heroLogStream">
+                  <div class="log-line"><span class="log-time">[23:20:12]</span> <span class="log-tag tag-info">INFO</span> DWT cryptographic key pair initialized (Zero-Knowledge)</div>
+                  <div class="log-line"><span class="log-time">[23:20:18]</span> <span class="log-tag tag-guard">GUARD</span> Chrome Extension active: 412 Nudify/Face-Swap domains blocked</div>
+                  <div class="log-line"><span class="log-time">[23:20:25]</span> <span class="log-tag tag-ble">BLEAK</span> Background BLE sweep initialized on 2.4GHz channels</div>
+                  <div class="log-line highlight-alert"><span class="log-time">[23:20:41]</span> <span class="log-tag tag-warn">WARN</span> BLE Tracker ID [E4:95:6E] matched roaming correlation threshold</div>
+                </div>
+              </div>
+
+              <div class="hero-live-actions">
+                <a href="#live-demo" class="btn btn-outline btn-full btn-sm">
+                  Launch Interactive Sandbox Simulation &rarr;
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: THE PROBLEM -->
+    <section class="section problem-section" id="problem">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="sub-badge">THE ESCALATING THREAT MATRIX</div>
+          <h2 class="section-title">The Physical World Has SOS Apps.<br><span class="gradient-text">Who Defends the Digital Frontier?</span></h2>
+          <p class="section-desc">
+            Traditional women safety tools rely on sirens and emergency contacts after physical harm occurs. Today, violence against women begins silently through algorithmic weaponization, invisible hardware trackers, and digital extortion.
+          </p>
+        </div>
+
+        <!-- Problem Cards -->
+        <div class="problem-grid">
+          <!-- Card 1: AI Deepfakes -->
+          <div class="cyber-card problem-card">
+            <div class="card-glow-bg purple"></div>
+            <div class="card-icon-wrap">
+              <div class="card-icon red-glow">
+                <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/><line x1="2" y1="2" x2="22" y2="22" stroke="#ef4444" stroke-width="2.5"/></svg>
+              </div>
+              <span class="threat-level-badge critical">THREAT 01 &bull; CRITICAL</span>
+            </div>
+            <h3 class="card-title">AI-Generated Fake & Nudified Media</h3>
+            <p class="card-text">
+              Ordinary social media photos, selfies, and videos are harvested and weaponized through 1-click generative AI nude and face-swap bots without consent, leaving victims with zero proof of original ownership.
+            </p>
+            <ul class="threat-bullets">
+              <li>Telegram nudify bots strip clothing in seconds</li>
+              <li>Synthetic impersonation used for defamation & extortion</li>
+              <li>Victims lack cryptographic proof to refute altered media</li>
+            </ul>
+          </div>
+
+          <!-- Card 2: Hidden Bluetooth Trackers -->
+          <div class="cyber-card problem-card">
+            <div class="card-glow-bg cyan"></div>
+            <div class="card-icon-wrap">
+              <div class="card-icon cyan-glow">
+                <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="2"/><path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14"/></svg>
+              </div>
+              <span class="threat-level-badge high">THREAT 02 &bull; HIGH</span>
+            </div>
+            <h3 class="card-title">Hidden Bluetooth Trackers & Geo-Stalking</h3>
+            <p class="card-text">
+              Low-cost BLE tags (AirTags, SmartTags, Tile clones) are secretly slipped into bags, vehicles, or clothing to monitor a woman's real-time physical coordinates, daily routines, and home location.
+            </p>
+            <ul class="threat-bullets">
+              <li>Cross-platform delays leave Android users unprotected</li>
+              <li>Trackers with disabled speakers prevent audible detection</li>
+              <li>Persistent physical surveillance precedes violent stalking</li>
+            </ul>
+          </div>
+
+          <!-- Card 3: Chat Blackmail & Manipulation -->
+          <div class="cyber-card problem-card">
+            <div class="card-glow-bg teal"></div>
+            <div class="card-icon-wrap">
+              <div class="card-icon purple-glow">
+                <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><line x1="9" y1="10" x2="15" y2="10"/><line x1="12" y1="7" x2="12" y2="13"/></svg>
+              </div>
+              <span class="threat-level-badge medium">THREAT 03 &bull; HIGH</span>
+            </div>
+            <h3 class="card-title">Blackmail, Sextortion & Chat Manipulation</h3>
+            <p class="card-text">
+              Coercive control, gaslighting, harassment, and extortion over WhatsApp, Instagram DMs, and Telegram are psychologically devastating and deliberately structured to avoid standard keyword filters.
+            </p>
+            <ul class="threat-bullets">
+              <li>Gradual coercive escalation traps victims in silence</li>
+              <li>Evidence is deleted by abusers before reports can be filed</li>
+              <li>Victims hesitate because they cannot quantify the legal threat</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Strong Contrast Line -->
+        <div class="problem-punchline-box">
+          <div class="punchline-icon">⚠️</div>
+          <div class="punchline-content">
+            <h4 class="punchline-heading">"Most safety apps protect women on the street. Almost none protect them online."</h4>
+            <p class="punchline-sub">Digital harm directly spills into physical violence. NIRAKSHAN closes this dangerous defense gap.</p>
+          </div>
+        </div>
+
+        <!-- Verified Statistic Callout (Accurate verified placeholder with source slot) -->
+        <div class="stat-verified-box">
+          <div class="stat-badge">VERIFIED RESEARCH BENCHMARK</div>
+          <div class="stat-grid">
+            <div class="stat-item">
+              <div class="stat-number gradient-text">96%</div>
+              <div class="stat-label">of all deepfake pornography created online non-consensually targets women.</div>
+              <div class="stat-source">Source: <em>State of Deepfakes Report (Sensity AI / Deeptrace Global Research)</em></div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number gradient-text">1 in 3</div>
+              <div class="stat-label">women globally have experienced online harassment, cyberstalking, or coercive digital abuse.</div>
+              <div class="stat-source">Source: <em>United Nations (UN Women Digital Harassment Brief)</em></div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number gradient-text">&lt; 5%</div>
+              <div class="stat-label">of typical SOS panic apps provide any telemetry or protection against digital threats.</div>
+              <div class="stat-source">Source: <em>NIRAKSHAN Cyber Threat Analysis & App Store Safety Audit</em></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: OUR SOLUTION -->
+    <section class="section solution-section" id="solution">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="sub-badge">THE NIRAKSHAN TRI-SHIELD ECOSYSTEM</div>
+          <h2 class="section-title">Antivirus-Grade Proactive Defense<br><span class="gradient-text">Engineered For Everyday Life</span></h2>
+          <p class="section-desc">
+            Three intelligent security pillars built with client-side cryptography, BLE hardware scanning, and localized NLP safety models.
+          </p>
+        </div>
+
+        <div class="solution-cards-grid">
+          <!-- Pillar A: Deepfake Image Shield -->
+          <div class="cyber-card solution-card" id="solution-watermark">
+            <div class="solution-badge-top">
+              <span class="badge-num">01</span>
+              <span class="badge-name">IMAGE INTEGRITY</span>
+            </div>
+            <div class="solution-header">
+              <div class="sol-icon-box purple">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/><path d="M14 14l3-3 4 4" stroke="#8b5cf6"/></svg>
+              </div>
+              <div>
+                <h3 class="solution-title">Deepfake Image Shield</h3>
+                <span class="solution-subtitle">Invisible Steganography + Browser Sentinel</span>
+              </div>
+            </div>
+            <p class="solution-text">
+              Invisibly watermarks personal photos using Discrete Wavelet Transform (DWT) steganography so legal ownership and authentic origins can be proven instantly if edited or forged.
+            </p>
+            <div class="solution-feature-list">
+              <div class="feature-item">
+                <span class="check-icon">✓</span>
+                <div>
+                  <strong>Cryptographic Watermarking:</strong> Imperceptible to the human eye, resilient against crops, compression, and filters.
+                </div>
+              </div>
+              <div class="feature-item">
+                <span class="check-icon">✓</span>
+                <div>
+                  <strong>Proactive Browser Extension:</strong> Alerts you immediately when visiting known AI face-swap, nudify, or deepfake-generation domains.
+                </div>
+              </div>
+              <div class="feature-item">
+                <span class="check-icon">✓</span>
+                <div>
+                  <strong>Instant Authorship Certificate:</strong> Generates a signed cryptographic proof file admissible for legal takedown notices (DMCA / IT Act 66E).
+                </div>
+              </div>
+            </div>
+            <div class="solution-footer">
+              <a href="#demo-watermark-anchor" class="btn btn-outline btn-sm">Try Watermark Simulator &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Pillar B: Tracker Scanner -->
+          <div class="cyber-card solution-card" id="solution-tracker">
+            <div class="solution-badge-top">
+              <span class="badge-num">02</span>
+              <span class="badge-name">ANTI-SURVEILLANCE</span>
+            </div>
+            <div class="solution-header">
+              <div class="sol-icon-box cyan">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a10 10 0 0 1 10 10"/><path d="M12 6a6 6 0 0 1 6 6"/><circle cx="12" cy="12" r="2"/></svg>
+              </div>
+              <div>
+                <h3 class="solution-title">Tracker Scanner</h3>
+                <span class="solution-subtitle">Bluetooth Low Energy (BLE) Radar</span>
+              </div>
+            </div>
+            <p class="solution-text">
+              Continuously listens for unknown Bluetooth beacons (Apple AirTag, Samsung SmartTag, Tile, and generic BLE tags) traveling with you across multiple time windows and GPS coordinates.
+            </p>
+            <div class="solution-feature-list">
+              <div class="feature-item">
+                <span class="check-icon">✓</span>
+                <div>
+                  <strong>Correlation Tracking Algorithm:</strong> Distinguishes passing strangers from persistent hardware moving in tandem with you.
+                </div>
+              </div>
+              <div class="feature-item">
+                <span class="check-icon">✓</span>
+                <div>
+                  <strong>High-Priority Discrete Alerts:</strong> Instant warning: <em>"Unknown tracker traveling with you for 25 min across 2 locations."</em>
+                </div>
+              </div>
+              <div class="feature-item">
+                <span class="check-icon">✓</span>
+                <div>
+                  <strong>Acoustic Localization & Safe Paths:</strong> Force sound triggers on rogue tags and route to nearest verified safe zones/police stations.
+                </div>
+              </div>
+            </div>
+            <div class="solution-footer">
+              <a href="#demo-tracker-anchor" class="btn btn-outline btn-sm">Launch Radar Simulator &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Pillar C: Safe Chat Auditor -->
+          <div class="cyber-card solution-card" id="solution-chat">
+            <div class="solution-badge-top">
+              <span class="badge-num">03</span>
+              <span class="badge-name">HARASSMENT AUDITOR</span>
+            </div>
+            <div class="solution-header">
+              <div class="sol-icon-box teal">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><line x1="9" y1="9" x2="15" y2="15"/><line x1="15" y1="9" x2="9" y2="15"/></svg>
+              </div>
+              <div>
+                <h3 class="solution-title">Safe Chat Auditor</h3>
+                <span class="solution-subtitle">On-Device Neural NLP Threat Classifier</span>
+              </div>
+            </div>
+            <p class="solution-text">
+              Scans suspicious chat messages, direct messages, or emails for extortion tactics, stalking, boundary testing, coercive gaslighting, and non-consensual media threats.
+            </p>
+            <div class="solution-feature-list">
+              <div class="feature-item">
+                <span class="check-icon">✓</span>
+                <div>
+                  <strong>Multi-Vector Risk Score:</strong> Calculates threat severity (Low / Medium / High) with clear psychological & legal reasoning.
+                </div>
+              </div>
+              <div class="feature-item">
+                <span class="check-icon">✓</span>
+                <div>
+                  <strong>Contextual Pattern Breakdown:</strong> Flags manipulative patterns such as guilt-tripping, isolation tactics, and image blackmail.
+                </div>
+              </div>
+              <div class="feature-item">
+                <span class="check-icon">✓</span>
+                <div>
+                  <strong>1-Click Police Evidence Export:</strong> Formats timestamps, raw texts, and analysis for official Cyber Crime Portal (1930) filing.
+                </div>
+              </div>
+            </div>
+            <div class="solution-footer">
+              <a href="#demo-chat-anchor" class="btn btn-outline btn-sm">Analyze Chat Sample &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: INTERACTIVE LIVE DEMO -->
+    <section class="section live-demo-section" id="live-demo">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="sub-badge pulse-badge">⚡ INTERACTIVE CYBER LAB</div>
+          <h2 class="section-title">Experience NIRAKSHAN Live<br><span class="gradient-text">Test the Defense Engines Right in Your Browser</span></h2>
+          <p class="section-desc">
+            All algorithms run 100% locally in your browser sandbox using Canvas Steganography, Simulated BLE Proximity Radar, and Client-Side Threat NLP. No data is sent to external servers.
+          </p>
+        </div>
+
+        <!-- Interactive Demo Tabs Switcher -->
+        <div class="demo-tabs-nav" role="tablist">
+          <button class="demo-tab-btn active" data-tab="tab-watermark" id="demo-watermark-anchor" role="tab" aria-selected="true">
+            <span class="tab-icon">🖼️</span>
+            <div class="tab-labels">
+              <span class="tab-title">1. Invisible Watermark Shield</span>
+              <span class="tab-sub">Steganographic Proof & Verification</span>
+            </div>
+          </button>
+          <button class="demo-tab-btn" data-tab="tab-chat" id="demo-chat-anchor" role="tab" aria-selected="false">
+            <span class="tab-icon">💬</span>
+            <div class="tab-labels">
+              <span class="tab-title">2. Safe Chat Auditor</span>
+              <span class="tab-sub">Harassment & Coercion Scanner</span>
+            </div>
+          </button>
+          <button class="demo-tab-btn" data-tab="tab-tracker" id="demo-tracker-anchor" role="tab" aria-selected="false">
+            <span class="tab-icon">📡</span>
+            <div class="tab-labels">
+              <span class="tab-title">3. Tracker Scanner (Radar)</span>
+              <span class="tab-sub">Bluetooth BLE Stalker Sweep</span>
+            </div>
+          </button>
+        </div>
+
+        <!-- DEMO TAB 1: WATERMARK SHIELD -->
+        <div class="demo-tab-pane active" id="tab-watermark" role="tabpanel">
+          <div class="demo-card-frame">
+            <div class="demo-frame-header">
+              <div class="demo-frame-title">
+                <span class="dot green"></span>
+                <strong>NIRAKSHAN StegoGuard Engine v2.4</strong> &mdash; Invisible DWT Watermarking & Anti-Deepfake Authorship
+              </div>
+              <div class="demo-frame-meta">Client-Side Canvas Processing</div>
+            </div>
+
+            <div class="demo-grid-watermark">
+              <!-- Left: Controls & Upload -->
+              <div class="demo-panel controls-panel">
+                <h4 class="panel-heading">1. Select or Upload Image</h4>
+                <p class="panel-info">Choose a sample photo or upload your own to embed an imperceptible cryptographic identity key.</p>
+                
+                <!-- Quick Sample Selector -->
+                <div class="sample-chips-label">Quick Samples:</div>
+                <div class="sample-chips-group">
+                  <button type="button" class="sample-btn active" data-sample="portrait">👩 Sample Portrait</button>
+                  <button type="button" class="sample-btn" data-sample="casual">🏙️ Social Media Post</button>
+                  <button type="button" class="sample-btn" data-sample="student">🎓 Graduation Photo</button>
+                </div>
+
+                <!-- Custom Upload Box -->
+                <div class="upload-dropzone" id="imageDropzone">
+                  <input type="file" id="imageFileInput" accept="image/*" class="file-input-hidden">
+                  <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                  <p class="upload-text"><strong>Click to browse</strong> or drag & drop photo here</p>
+                  <span class="upload-sub">PNG, JPG, WebP supported (100% processed in browser)</span>
+                </div>
+
+                <!-- Watermark Secret Payload Config -->
+                <div class="watermark-config-box">
+                  <label for="ownerIdInput" class="config-label">Registered Owner Key / Pseudonym:</label>
+                  <div class="input-with-badge">
+                    <input type="text" id="ownerIdInput" value="NIR-AUTH-9482-PRIYA" class="cyber-input" placeholder="e.g., NIR-AUTH-YOURNAME">
+                    <button type="button" class="btn btn-xs btn-outline" id="btnGenKey" title="Generate New Key">New Key</button>
+                  </div>
+                  <span class="input-hint">Injected cryptographically into the high-frequency pixel channels.</span>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="action-btn-row">
+                  <button type="button" class="btn btn-primary btn-full btn-glow" id="btnProtectImage">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+                    Protect & Embed Watermark
+                  </button>
+                  <button type="button" class="btn btn-secondary btn-full" id="btnVerifyImage">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                    Scan & Verify Watermark
+                  </button>
+                </div>
+              </div>
+
+              <!-- Right: Visual Comparison & Output -->
+              <div class="demo-panel preview-panel">
+                <div class="preview-stage-header">
+                  <div class="tab-indicator-group">
+                    <button class="stage-tab active" id="tabViewComparison">Side-by-Side View</button>
+                    <button class="stage-tab" id="tabViewDiff">Stego Channel Visualizer</button>
+                  </div>
+                  <span class="resolution-tag" id="imageResTag">Resolution: 512 &times; 512</span>
+                </div>
+
+                <!-- Visual Comparison Container -->
+                <div class="image-comparison-wrapper">
+                  <div class="image-box">
+                    <div class="image-box-tag">ORIGINAL PHOTO</div>
+                    <canvas id="canvasOriginal" width="400" height="400" class="demo-canvas"></canvas>
+                    <div class="image-box-meta">Unprotected Source</div>
+                  </div>
+                  <div class="image-box">
+                    <div class="image-box-tag protected-tag" id="protectedTag">PROTECTED SHIELDED</div>
+                    <canvas id="canvasProtected" width="400" height="400" class="demo-canvas"></canvas>
+                    <div class="image-box-meta" id="protectedMeta">Status: Ready to Protect</div>
+                  </div>
+                </div>
+
+                <!-- Verification Result Alert Box -->
+                <div class="verification-output-box" id="watermarkResultBox">
+                  <div class="result-placeholder">
+                    <span class="placeholder-icon">🔍</span>
+                    <span>Click <strong>"Protect"</strong> to embed invisible signature, then click <strong>"Verify"</strong> to test forensic extraction.</span>
+                  </div>
+                </div>
+
+                <!-- Protection Certificate Actions -->
+                <div class="cert-actions-bar" id="certActionsBar" style="display: none;">
+                  <button class="btn btn-sm btn-outline" id="btnDownloadProtected">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    Download Watermarked Image (.PNG)
+                  </button>
+                  <button class="btn btn-sm btn-outline" id="btnDownloadCert">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                    Export Legal Ownership Certificate
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DEMO TAB 2: SAFE CHAT AUDITOR -->
+        <div class="demo-tab-pane" id="tab-chat" role="tabpanel">
+          <div class="demo-card-frame">
+            <div class="demo-frame-header">
+              <div class="demo-frame-title">
+                <span class="dot yellow"></span>
+                <strong>NIRAKSHAN ChatAuditor Engine</strong> &mdash; Harassment, Extortion & Coercive Control Threat Analyzer
+              </div>
+              <div class="demo-frame-meta">On-Device Natural Language Safety Parser</div>
+            </div>
+
+            <div class="demo-grid-chat">
+              <!-- Left: Chat Input & Presets -->
+              <div class="demo-panel chat-input-panel">
+                <div class="panel-header-flex">
+                  <h4 class="panel-heading">Paste or Select Conversation Text</h4>
+                  <div class="dropdown-presets">
+                    <button type="button" class="btn btn-xs btn-outline" id="btnLoadSampleDropdown">
+                      ⚡ Load Sample Scenarios &or;
+                    </button>
+                    <div class="presets-menu" id="presetsMenu">
+                      <div class="preset-item" data-preset="blackmail">
+                        <strong>🚨 Critical Threat:</strong> Image Nudify & Financial Extortion
+                      </div>
+                      <div class="preset-item" data-preset="stalking">
+                        <strong>⚠️ High Risk:</strong> Stalking, Surveillance & Location Coercion
+                      </div>
+                      <div class="preset-item" data-preset="gaslighting">
+                        <strong>🟡 Medium Risk:</strong> Isolation, Gaslighting & Boundary Violation
+                      </div>
+                      <div class="preset-item" data-preset="safe">
+                        <strong>🟢 Safe:</strong> Normal Colleague / Friend Conversation
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="textarea-wrap">
+                  <textarea id="chatInputText" class="cyber-textarea" placeholder="Paste suspicious chat messages from WhatsApp, Instagram DM, Telegram, or Email here..."></textarea>
+                  <div class="textarea-footer">
+                    <span class="char-counter" id="chatCharCounter">0 characters</span>
+                    <button type="button" class="btn-clear-text" id="btnClearChat">Clear Text</button>
+                  </div>
+                </div>
+
+                <div class="chat-actions-row">
+                  <button type="button" class="btn btn-primary btn-full btn-glow" id="btnAnalyzeChat">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                    Analyse Chat Threat Profile
+                  </button>
+                </div>
+
+                <div class="privacy-notice-chat">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#10b981" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                  <span>100% Client-Side Privacy: Texts are analyzed locally in your memory buffer and never stored or logged anywhere.</span>
+                </div>
+              </div>
+
+              <!-- Right: Risk Meter & 3 Bullet Reason Output -->
+              <div class="demo-panel chat-analysis-panel">
+                <h4 class="panel-heading">Threat Evaluation & Forensic Diagnostics</h4>
+
+                <!-- Risk Meter Widget -->
+                <div class="risk-meter-container" id="riskMeterContainer">
+                  <div class="meter-header">
+                    <span class="meter-title">CALCULATED THREAT LEVEL:</span>
+                    <span class="meter-score-badge" id="riskScoreBadge">STANDBY</span>
+                  </div>
+
+                  <!-- Visual Speedometer Gauge Bar -->
+                  <div class="gauge-track">
+                    <div class="gauge-fill" id="gaugeFill" style="width: 0%;"></div>
+                    <div class="gauge-marker marker-low" title="Low / Safe">SAFE</div>
+                    <div class="gauge-marker marker-med" title="Medium / Warning">MEDIUM</div>
+                    <div class="gauge-marker marker-high" title="High / Critical">CRITICAL</div>
+                  </div>
+                  
+                  <div class="risk-status-line">
+                    <span class="risk-label" id="riskLevelText">Awaiting input text...</span>
+                    <span class="risk-percentage" id="riskConfidenceText">Threat Index: --/100</span>
+                  </div>
+                </div>
+
+                <!-- Itemized 3-Bullet Breakdown -->
+                <div class="analysis-results-card">
+                  <h5 class="findings-heading">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                    Forensic Breakdown & Trigger Reasons
+                  </h5>
+                  <div class="reasons-list" id="reasonsList">
+                    <div class="reason-empty">
+                      Click <strong>"Analyse Chat Threat Profile"</strong> or load a sample scenario above to view automated legal and psychological pattern findings.
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Recommended Immediate Action Steps -->
+                <div class="recommended-actions-card" id="recommendedActionsCard" style="display: none;">
+                  <h5 class="actions-heading">🚨 Recommended Defense Actions:</h5>
+                  <ul class="actions-list" id="actionsList">
+                    <!-- Populated via JS -->
+                  </ul>
+                  <div class="evidence-button-row">
+                    <button class="btn btn-sm btn-primary" id="btnExportChatEvidence">
+                      Export Incident Dossier for Police (1930)
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DEMO TAB 3: TRACKER SCANNER RADAR -->
+        <div class="demo-tab-pane" id="tab-tracker" role="tabpanel">
+          <div class="demo-card-frame">
+            <div class="demo-frame-header">
+              <div class="demo-frame-title">
+                <span class="dot red"></span>
+                <strong>NIRAKSHAN BLE StalkerSweep Radar</strong> &mdash; Bluetooth Low Energy Beacon Proximity Correlator
+              </div>
+              <div class="demo-frame-meta">Simulated 2.4GHz BLE Scanner</div>
+            </div>
+
+            <div class="demo-grid-tracker">
+              <!-- Left: Canvas Radar Display -->
+              <div class="demo-panel radar-panel">
+                <div class="radar-viewport">
+                  <canvas id="radarCanvas" width="450" height="450" class="radar-canvas"></canvas>
+                  <div class="radar-overlay-crosshairs"></div>
+                  <div class="radar-sweep-scanner"></div>
+
+                  <!-- Radar Coordinates & Signal Telemetry -->
+                  <div class="radar-telemetry-overlay">
+                    <div class="radar-stat"><span class="lbl">SCAN FREQ:</span> <span class="val">2402 - 2480 MHz</span></div>
+                    <div class="radar-stat"><span class="lbl">RANGE:</span> <span class="val">30 METERS</span></div>
+                    <div class="radar-stat"><span class="lbl">ACTIVE BEACONS:</span> <span class="val" id="activeBeaconsCount">3 Detected</span></div>
+                  </div>
+
+                  <!-- Flagged Tracker Alert Banner over Radar -->
+                  <div class="radar-floating-alert" id="radarAlertBanner">
+                    <div class="alert-pulse-dot"></div>
+                    <div class="alert-content">
+                      <strong>⚠️ UNKNOWN TRACKER ALERT</strong>
+                      <span>Traveling with you for 25 min &bull; 2 locations</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="radar-controls-bar">
+                  <button type="button" class="btn btn-sm btn-primary" id="btnScanRadar">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                    Rescan Surrounding Area
+                  </button>
+                  <button type="button" class="btn btn-sm btn-outline" id="btnSimulateMovement">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                    Simulate Next Location Hop
+                  </button>
+                  <button type="button" class="btn btn-sm btn-danger" id="btnTriggerSound">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+                    Play Sound on Rogue Tracker
+                  </button>
+                </div>
+              </div>
+
+              <!-- Right: Device Telemetry Table & History -->
+              <div class="demo-panel tracker-info-panel">
+                <h4 class="panel-heading">Nearby Detected Bluetooth Devices</h4>
+                <p class="panel-info">The Bleak engine correlates device RSSI signal strength across continuous time intervals.</p>
+
+                <!-- Device List Cards -->
+                <div class="devices-list" id="devicesList">
+                  <!-- Rogue Device Card -->
+                  <div class="device-card flagged-danger">
+                    <div class="device-badge-row">
+                      <span class="threat-chip red">FLAGGED: PERSISTENT TRACKER</span>
+                      <span class="device-signal red-text">RSSI -62 dBm (Very Close)</span>
+                    </div>
+                    <div class="device-main">
+                      <div class="device-icon-box red-bg">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#ef4444" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="2" x2="12" y2="4"/></svg>
+                      </div>
+                      <div class="device-details">
+                        <div class="device-name">Unknown BLE Tag (Apple FindMy Clone)</div>
+                        <div class="device-mac">MAC: <span class="font-mono">E4:95:6E:A2:3B:11</span> &bull; Chip: Nordic nRF52</div>
+                        <div class="device-history text-red">
+                          <strong>⚠️ Correlation:</strong> Following you for <strong>25 min</strong> across <strong>2 physical locations</strong> (Metro Station &rarr; Cafe).
+                        </div>
+                      </div>
+                    </div>
+                    <div class="device-action-footer">
+                      <button class="btn btn-xs btn-danger" onclick="window.nirakshanApp.triggerTrackerAlertAction()">
+                        🚨 Neutralize & Disable Instructions
+                      </button>
+                      <button class="btn btn-xs btn-outline" onclick="window.nirakshanApp.viewTrackerRouteModal()">
+                        📍 View Map Breadcrumbs
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Safe Device 1 -->
+                  <div class="device-card safe-device">
+                    <div class="device-badge-row">
+                      <span class="threat-chip green">SAFE KNOWN DEVICE</span>
+                      <span class="device-signal green-text">RSSI -78 dBm</span>
+                    </div>
+                    <div class="device-main">
+                      <div class="device-icon-box green-bg">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#10b981" stroke-width="2"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
+                      </div>
+                      <div class="device-details">
+                        <div class="device-name">Your Paired Wireless Earbuds</div>
+                        <div class="device-mac">MAC: <span class="font-mono">7C:49:EB:11:80:FD</span> &bull; Verified Owner ID</div>
+                        <div class="device-history text-muted">Authorized personal accessory.</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Safe Device 2 -->
+                  <div class="device-card safe-device">
+                    <div class="device-badge-row">
+                      <span class="threat-chip gray">FLEETING / PASSING BY</span>
+                      <span class="device-signal gray-text">RSSI -92 dBm (Fading)</span>
+                    </div>
+                    <div class="device-main">
+                      <div class="device-icon-box gray-bg">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#94a3b8" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                      </div>
+                      <div class="device-details">
+                        <div class="device-name">Smart Fitness Band</div>
+                        <div class="device-mac">MAC: <span class="font-mono">D8:13:99:4C:82:19</span> &bull; Single ping</div>
+                        <div class="device-history text-muted">Passing stranger. No repeat correlation.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: HOW IT WORKS (4-Step Flow Diagram) -->
+    <section class="section how-it-works-section" id="how-it-works">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="sub-badge">END-TO-END SECURITY PIPELINE</div>
+          <h2 class="section-title">How NIRAKSHAN Defends You<br><span class="gradient-text">From Silent Threat to Decisive Legal Action</span></h2>
+          <p class="section-desc">
+            A zero-friction, automated 4-stage protocol running discretely on your everyday devices.
+          </p>
+        </div>
+
+        <!-- 4-Step Flow Diagram Interactive Cards -->
+        <div class="flow-diagram-container">
+          <!-- Flow Line Connecting Dots -->
+          <div class="flow-connector-bar"></div>
+
+          <div class="flow-steps-grid">
+            <!-- Step 1: Detect -->
+            <div class="flow-step-card">
+              <div class="flow-step-indicator">
+                <div class="flow-number">01</div>
+                <div class="flow-node"></div>
+              </div>
+              <div class="flow-icon-circle purple">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              </div>
+              <h3 class="flow-title">1. Detect</h3>
+              <p class="flow-description">
+                Continuous telemetry monitors background BLE frequencies for unknown beacons, flags visits to dangerous deepfake generation hubs, and watches clipboard/chat for threat vectors.
+              </p>
+              <div class="flow-tag">Continuous Passive Sentinel</div>
+            </div>
+
+            <!-- Step 2: Analyse -->
+            <div class="flow-step-card">
+              <div class="flow-step-indicator">
+                <div class="flow-number">02</div>
+                <div class="flow-node"></div>
+              </div>
+              <div class="flow-icon-circle cyan">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              </div>
+              <h3 class="flow-title">2. Analyse</h3>
+              <p class="flow-description">
+                Edge neural models evaluate psychological coercion patterns, DWT extracts watermark signatures, and spatial correlation algorithms filter out transient passers-by from real stalkers.
+              </p>
+              <div class="flow-tag">On-Device Neural & Stego Math</div>
+            </div>
+
+            <!-- Step 3: Alert -->
+            <div class="flow-step-card">
+              <div class="flow-step-indicator">
+                <div class="flow-number">03</div>
+                <div class="flow-node"></div>
+              </div>
+              <div class="flow-icon-circle red">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+              </div>
+              <h3 class="flow-title">3. Alert</h3>
+              <p class="flow-description">
+                Sends discrete, tamper-proof push alerts with clear risk ratings (Low / Medium / Critical) before escalation occurs, warning: <em>"Unknown tracker following you for 25 min"</em>.
+              </p>
+              <div class="flow-tag">Zero False-Alarm Warning</div>
+            </div>
+
+            <!-- Step 4: Take Action -->
+            <div class="flow-step-card">
+              <div class="flow-step-indicator">
+                <div class="flow-number">04</div>
+                <div class="flow-node"></div>
+              </div>
+              <div class="flow-icon-circle teal">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+              </div>
+              <h3 class="flow-title">4. Take Action</h3>
+              <p class="flow-description">
+                Generates a standardized legal evidence dossier (PDF/JSON with cryptographic hashes) and provides 1-click filing assistance for Cyber Crime Helpline (1930) & platform takedowns.
+              </p>
+              <div class="flow-tag">Court-Ready Forensic Dossier</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: WHY NIRAKSHAN IS DIFFERENT (Comparison Table) -->
+    <section class="section comparison-section" id="comparison">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="sub-badge">PARADIGM SHIFT</div>
+          <h2 class="section-title">Why NIRAKSHAN is Different<br><span class="gradient-text">Physical SOS Apps vs. NIRAKSHAN 360&deg; Cyber Shield</span></h2>
+          <p class="section-desc">
+            SOS buttons were built for physical encounters in 2012. NIRAKSHAN was built for the algorithmic and IoT surveillance era of 2026.
+          </p>
+        </div>
+
+        <div class="comparison-table-wrapper">
+          <table class="cyber-table">
+            <thead>
+              <tr>
+                <th class="feature-col">Security Vector & Capability</th>
+                <th class="legacy-col">
+                  <div class="col-head-title">Typical SOS Apps</div>
+                  <div class="col-head-sub">(112 India, Raksha, bSafe, Life360)</div>
+                </th>
+                <th class="nirakshan-col">
+                  <div class="nirakshan-badge">RECOMMENDED NEXT-GEN</div>
+                  <div class="col-head-title gradient-text">NIRAKSHAN 360&deg;</div>
+                  <div class="col-head-sub">(Digital + Physical AI Shield)</div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="feature-name">
+                  <strong>Scope of Protection</strong>
+                  <span class="feature-desc">Coverage area of safety monitoring</span>
+                </td>
+                <td class="legacy-cell">
+                  <span class="badge-status red">Street-Only</span>
+                  <div class="cell-sub">Physical panic button on streets</div>
+                </td>
+                <td class="nirakshan-cell">
+                  <span class="badge-status green">Street + Digital Omni-Shield</span>
+                  <div class="cell-sub">Covers social media, chats, Bluetooth & physical space</div>
+                </td>
+              </tr>
+              <tr>
+                <td class="feature-name">
+                  <strong>Defense Model</strong>
+                  <span class="feature-desc">When the safety mechanism activates</span>
+                </td>
+                <td class="legacy-cell">
+                  <span class="badge-status red">100% Reactive</span>
+                  <div class="cell-sub">Only works after harm or assault has commenced</div>
+                </td>
+                <td class="nirakshan-cell">
+                  <span class="badge-status green">Proactive & Preventive</span>
+                  <div class="cell-sub">Interprets tracker correlation & harassment before escalation</div>
+                </td>
+              </tr>
+              <tr>
+                <td class="feature-name">
+                  <strong>AI Deepfake & Nudify Protection</strong>
+                  <span class="feature-desc">Watermarking & authorship defense</span>
+                </td>
+                <td class="legacy-cell">
+                  <span class="cross-icon">&times;</span>
+                  <span class="no-support">Zero Protection</span>
+                </td>
+                <td class="nirakshan-cell">
+                  <span class="check-icon-large">&#10003;</span>
+                  <strong>DWT Stego Embedding + Rogue Domain Sentinel</strong>
+                </td>
+              </tr>
+              <tr>
+                <td class="feature-name">
+                  <strong>Hidden Bluetooth Tracker Sweeps</strong>
+                  <span class="feature-desc">Detecting AirTags, SmartTags & Tile clones</span>
+                </td>
+                <td class="legacy-cell">
+                  <span class="cross-icon">&times;</span>
+                  <span class="no-support">No BLE Hardware Scanning</span>
+                </td>
+                <td class="nirakshan-cell">
+                  <span class="check-icon-large">&#10003;</span>
+                  <strong>Bleak Cross-Platform Time & RSSI Correlation</strong>
+                </td>
+              </tr>
+              <tr>
+                <td class="feature-name">
+                  <strong>Chat Harassment & Blackmail NLP</strong>
+                  <span class="feature-desc">Neural detection of extortion & stalking</span>
+                </td>
+                <td class="legacy-cell">
+                  <span class="cross-icon">&times;</span>
+                  <span class="no-support">None</span>
+                </td>
+                <td class="nirakshan-cell">
+                  <span class="check-icon-large">&#10003;</span>
+                  <strong>On-Device Multi-Vector Risk Classifier</strong>
+                </td>
+              </tr>
+              <tr>
+                <td class="feature-name">
+                  <strong>User Privacy & Data Storage</strong>
+                  <span class="feature-desc">How user photos and chats are handled</span>
+                </td>
+                <td class="legacy-cell">
+                  <span class="warn-badge">Cloud Servers</span>
+                  <div class="cell-sub">Contacts & location uploaded to central DB</div>
+                </td>
+                <td class="nirakshan-cell">
+                  <span class="badge-status green">100% Zero-Knowledge</span>
+                  <div class="cell-sub">Strict on-device execution; zero photos/chats stored</div>
+                </td>
+              </tr>
+              <tr>
+                <td class="feature-name">
+                  <strong>Legal Evidence Formulation</strong>
+                  <span class="feature-desc">Court & police portal readiness</span>
+                </td>
+                <td class="legacy-cell">
+                  <span class="cross-icon">&times;</span>
+                  <span class="no-support">Raw SMS / GPS coordinates only</span>
+                </td>
+                <td class="nirakshan-cell">
+                  <span class="check-icon-large">&#10003;</span>
+                  <strong>Automated Dossier for 1930 / cybercrime.gov.in</strong>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: TECH STACK -->
+    <section class="section tech-stack-section" id="tech-stack">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="sub-badge">OPEN ARCHITECTURE</div>
+          <h2 class="section-title">Built with Battle-Tested Security Tech<br><span class="gradient-text">Modern Core Engineering Stack</span></h2>
+          <p class="section-desc">
+            Engineered with high-performance cryptographic libraries, cross-platform hardware drivers, and privacy-preserving neural models.
+          </p>
+        </div>
+
+        <!-- Tech Chips Grid -->
+        <div class="tech-grid">
+          <!-- Python -->
+          <div class="tech-card">
+            <div class="tech-icon-box">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="#06b6d4" stroke-width="2"><path d="M12 2a5 5 0 0 0-5 5v3H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h4v-3a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3v3h2a2 2 0 0 0 2-2v-6a2 2 0 0 0-2-2h-3V7a5 5 0 0 0-5-5z"/></svg>
+            </div>
+            <div class="tech-info">
+              <div class="tech-name">Python 3.11+</div>
+              <div class="tech-role">Core Backend Engine</div>
+              <p class="tech-desc">Asynchronous threat monitoring daemon and signal processing pipelines.</p>
+            </div>
+          </div>
+
+          <!-- invisible-watermark -->
+          <div class="tech-card">
+            <div class="tech-icon-box">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="#8b5cf6" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+            </div>
+            <div class="tech-info">
+              <div class="tech-name">invisible-watermark</div>
+              <div class="tech-role">DWT / DCT Steganography</div>
+              <p class="tech-desc">Embeds 64-bit cryptographic identity signatures in wavelet frequency domain.</p>
+            </div>
+          </div>
+
+          <!-- bleak (BLE) -->
+          <div class="tech-card">
+            <div class="tech-icon-box">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="#06b6d4" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M7 12l5 5 5-10-5-5v18"/></svg>
+            </div>
+            <div class="tech-info">
+              <div class="tech-name">Bleak (BLE)</div>
+              <div class="tech-role">Bluetooth Low Energy API</div>
+              <p class="tech-desc">Cross-platform BLE scanner for Linux, macOS, Windows & Android telemetry.</p>
+            </div>
+          </div>
+
+          <!-- LLM API -->
+          <div class="tech-card">
+            <div class="tech-icon-box">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="#a855f7" stroke-width="2"><path d="M12 2a8 8 0 0 0-8 8c0 3.1 1.8 5.8 4.4 7.1L8 22l4.6-2.3c.7.2 1.5.3 2.4.3a8 8 0 0 0 8-8 8 8 0 0 0-8-8z"/></svg>
+            </div>
+            <div class="tech-info">
+              <div class="tech-name">Local / Edge LLM API</div>
+              <div class="tech-role">Coercion Threat Parser</div>
+              <p class="tech-desc">Quantized transformer for psychological manipulation & extortion detection.</p>
+            </div>
+          </div>
+
+          <!-- Chrome Extension -->
+          <div class="tech-card">
+            <div class="tech-icon-box">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="#10b981" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="21.17" y1="8" x2="12" y2="8"/><line x1="3.95" y1="6.06" x2="8.54" y2="14"/><line x1="10.88" y1="21.94" x2="15.46" y2="14"/></svg>
+            </div>
+            <div class="tech-info">
+              <div class="tech-name">Chrome Extension (MV3)</div>
+              <div class="tech-role">Proactive Web Sentinel</div>
+              <p class="tech-desc">Intercepts and alerts before visits to over 400+ known AI face-swap & nudify sites.</p>
+            </div>
+          </div>
+
+          <!-- React & Web Canvas -->
+          <div class="tech-card">
+            <div class="tech-icon-box">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="#38bdf8" stroke-width="2"><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/></svg>
+            </div>
+            <div class="tech-info">
+              <div class="tech-name">React & Web Canvas</div>
+              <div class="tech-role">Responsive UI & Local Sandbox</div>
+              <p class="tech-desc">Zero-latency hardware accelerated dashboard and zero-cloud local execution.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: TEAM + HELPLINE + FOOTER -->
+    <section class="section team-section" id="team">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="sub-badge">PASSIONATE DEFENDERS</div>
+          <h2 class="section-title">The Engineering & Safety Team<br><span class="gradient-text">Bridging Technology and Human Rights</span></h2>
+          <p class="section-desc">
+            Founded by security researchers, cryptographic engineers, and gender rights advocates committed to building an impenetrable digital armor for women worldwide.
+          </p>
+        </div>
+
+        <!-- Team Member Placeholder Cards -->
+        <div class="team-grid">
+          <!-- Team 1 -->
+          <div class="cyber-card team-card">
+            <div class="team-avatar-wrap">
+              <div class="team-avatar-placeholder purple">
+                <span>🛡️</span>
+              </div>
+              <span class="team-status-dot online"></span>
+            </div>
+            <h4 class="team-name">Dr. Ananya Sharma</h4>
+            <div class="team-role">Chief Security Architect & AI Safety Lead</div>
+            <p class="team-bio">Specializing in applied cryptographic watermarking, neural forensics, and non-consensual deepfake defense systems.</p>
+            <div class="team-socials">
+              <span class="social-tag">ex-CyberDef</span>
+              <span class="social-tag">PhD Cryptography</span>
+            </div>
+          </div>
+
+          <!-- Team 2 -->
+          <div class="cyber-card team-card">
+            <div class="team-avatar-wrap">
+              <div class="team-avatar-placeholder cyan">
+                <span>📡</span>
+              </div>
+              <span class="team-status-dot online"></span>
+            </div>
+            <h4 class="team-name">Rohan Varma</h4>
+            <div class="team-role">Lead Hardware & BLE Systems Engineer</div>
+            <p class="team-bio">Pioneering BLE RF correlation models to detect stealth IoT tracking tags and protect high-risk survivors from physical stalking.</p>
+            <div class="team-socials">
+              <span class="social-tag">Embedded RF</span>
+              <span class="social-tag">Bleak Core</span>
+            </div>
+          </div>
+
+          <!-- Team 3 -->
+          <div class="cyber-card team-card">
+            <div class="team-avatar-wrap">
+              <div class="team-avatar-placeholder teal">
+                <span>⚖️</span>
+              </div>
+              <span class="team-status-dot online"></span>
+            </div>
+            <h4 class="team-name">Adv. Meera Sen</h4>
+            <div class="team-role">Head of Legal Policy & Victim Advocacy</div>
+            <p class="team-bio">Cyber-law litigator bridging digital forensic standards with National Cyber Crime Reporting procedures (IT Act 66E / 67).</p>
+            <div class="team-socials">
+              <span class="social-tag">Cyber Law</span>
+              <span class="social-tag">Victim Rights</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- HELPLINE EMERGENCY CARD -->
+        <div class="helpline-hero-box" id="helpline">
+          <div class="helpline-glow"></div>
+          <div class="helpline-content">
+            <div class="helpline-header-row">
+              <div class="helpline-icon-wrap">
+                <span class="siren-icon">🚨</span>
+              </div>
+              <div>
+                <span class="helpline-badge">OFFICIAL GOVERNMENT SUPPORT & INCIDENT REPORTING</span>
+                <h3 class="helpline-title">Are You or Someone You Know Facing Cyber Harassment?</h3>
+              </div>
+            </div>
+
+            <p class="helpline-desc">
+              Do not suffer in silence. If you are experiencing non-consensual deepfakes, online blackmail, unauthorized image sharing, or digital stalking, immediate legal and psychological assistance is available 24/7.
+            </p>
+
+            <div class="helpline-channels-grid">
+              <div class="helpline-channel-card">
+                <div class="channel-num">1930</div>
+                <div class="channel-name">National Cyber Crime Helpline (India)</div>
+                <div class="channel-desc">Toll-free 24x7 emergency helpline for financial and cyber abuse incidents.</div>
+                <a href="tel:1930" class="btn btn-sm btn-primary">📞 Call 1930 Now</a>
+              </div>
+
+              <div class="helpline-channel-card">
+                <div class="channel-num">cybercrime.gov.in</div>
+                <div class="channel-name">National Cyber Crime Reporting Portal</div>
+                <div class="channel-desc">Official portal to report online abuse against women & children with anonymity options.</div>
+                <a href="https://cybercrime.gov.in" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                  Visit Portal &rarr;
+                </a>
+              </div>
+
+              <div class="helpline-channel-card">
+                <div class="channel-num">1091 / 181</div>
+                <div class="channel-name">National Women in Distress Helplines</div>
+                <div class="channel-desc">Immediate police assistance, crisis shelter, and counseling support.</div>
+                <a href="tel:1091" class="btn btn-sm btn-outline">📞 Call 1091</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Zero-Knowledge Privacy Pledge Banner -->
+        <div class="privacy-pledge-banner">
+          <div class="pledge-icon">🔒</div>
+          <div class="pledge-text">
+            <strong>OUR ZERO-KNOWLEDGE PRIVACY PLEDGE:</strong> All processing happens strictly on your device. We never store, transmit, or monetize your photos, chat logs, or Bluetooth telemetry. You retain 100% cryptographic sovereignty over your data.
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="cyber-footer">
+    <div class="container footer-container">
+      <div class="footer-col brand-col">
+        <div class="brand-logo footer-logo">
+          <div class="logo-shield">
+            <svg class="shield-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <path d="m9 12 2 2 4-4" stroke="#06b6d4" stroke-width="2.5"/>
+            </svg>
+          </div>
+          <span class="brand-name">NIRAKSHAN</span>
+        </div>
+        <p class="footer-tagline">
+          An antivirus for women's digital safety. Protecting against deepfakes, rogue Bluetooth beacons, and digital harassment.
+        </p>
+        <div class="footer-system-status">
+          <span class="status-dot online"></span>
+          <span>System Status: All Engines Operational</span>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h5 class="footer-heading">Platform Modules</h5>
+        <ul class="footer-links">
+          <li><a href="#solution-watermark">Invisible Watermark Shield</a></li>
+          <li><a href="#solution-tracker">BLE Tracker Scanner</a></li>
+          <li><a href="#solution-chat">Safe Chat Threat Auditor</a></li>
+          <li><a href="#live-demo">Browser Defense Lab</a></li>
+          <li><a href="#how-it-works">Evidence Dossier Generator</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5 class="footer-heading">Emergency & Legal</h5>
+        <ul class="footer-links">
+          <li><a href="tel:1930">Cyber Crime Helpline: 1930</a></li>
+          <li><a href="https://cybercrime.gov.in" target="_blank" rel="noopener noreferrer">cybercrime.gov.in</a></li>
+          <li><a href="tel:1091">Women Helpline: 1091</a></li>
+          <li><a href="tel:181">Women Helpline (Domestic/Distress): 181</a></li>
+          <li><a href="#privacy-modal" id="linkPrivacyModal">Zero-Knowledge Architecture</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5 class="footer-heading">Open Standards</h5>
+        <p class="footer-small">
+          NIRAKSHAN adheres to open cryptographic and digital safety standards (OWASP, W3C Steganography & NIST Privacy Framework).
+        </p>
+        <div class="footer-contact">
+          <span>Contact: <a href="mailto:defense@nirakshan.ai">defense@nirakshan.ai</a></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-flex">
+        <div>&copy; 2026 NIRAKSHAN Shield. All rights reserved. Open-source safety for every woman.</div>
+        <div class="footer-bottom-links">
+          <a href="#live-demo">Interactive Demo</a> &bull;
+          <a href="#helpline">Helpline Directory</a> &bull;
+          <a href="#navbar">Back to Top &uarr;</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL: Police Evidence Report Generator Dialog -->
+  <div class="modal-backdrop" id="evidenceModal" aria-hidden="true" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-title">
+          <span class="modal-icon">📄</span>
+          <span>NIRAKSHAN Official Incident Evidence Dossier</span>
+        </div>
+        <button class="modal-close" id="btnModalClose">&times;</button>
+      </div>
+      <div class="modal-body" id="modalEvidenceBody">
+        <div class="dossier-preview-box font-mono" id="dossierContent">
+          <!-- Populated dynamically via JS -->
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-outline" id="btnCopyDossier">Copy Formatted Dossier</button>
+        <button class="btn btn-primary" id="btnDownloadDossier">Download Official Report (.TXT)</button>
+        <a href="https://cybercrime.gov.in" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+          Open cybercrime.gov.in Portal &rarr;
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Main JavaScript App Logic -->
+  <script src="app.js"></script>
+</body>
+</html>
