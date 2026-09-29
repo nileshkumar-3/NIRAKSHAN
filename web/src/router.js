@@ -47,22 +47,51 @@ export function idToPath(id) {
 }
 
 /**
+ * History routing gives clean URLs, but it needs a server that rewrites every
+ * unknown path to index.html. Static hosts like GitHub Pages do not do that, so
+ * a deep link such as /dashboard would 404 on refresh.
+ *
+ * So: when the app is built for a sub-path (BASE_URL !== '/', which is what the
+ * Pages deploy sets), switch to hash routing. Dev keeps the tidy URLs, and the
+ * deployed site works on any static host with no server config at all.
+ */
+export const HASH_MODE = import.meta.env.BASE_URL !== '/';
+
+/** Reads the current route from whichever mode is active. */
+function readPath() {
+  if (!HASH_MODE) return normalize(window.location.pathname);
+  const hash = window.location.hash.replace(/^#/, '');
+  return hash ? normalize(hash) : DEFAULT_ROUTE.path;
+}
+
+/**
  * @returns {{ activePage: string | null, notFound: boolean, setActivePage: (id: string) => void }}
  *   `activePage` is null when the URL does not match a known route.
  */
 export function useRouter() {
-  const [path, setPath] = useState(() => normalize(window.location.pathname));
+  const [path, setPath] = useState(readPath);
 
   useEffect(() => {
-    const handlePop = () => setPath(normalize(window.location.pathname));
-    window.addEventListener('popstate', handlePop);
-    return () => window.removeEventListener('popstate', handlePop);
+    const handleChange = () => setPath(readPath());
+    // popstate covers the back/forward buttons; hashchange covers a hash that
+    // was edited or pasted by hand. Both are idempotent, so double-firing is fine.
+    window.addEventListener('popstate', handleChange);
+    window.addEventListener('hashchange', handleChange);
+    return () => {
+      window.removeEventListener('popstate', handleChange);
+      window.removeEventListener('hashchange', handleChange);
+    };
   }, []);
 
   const setActivePage = useCallback((id) => {
     const route = ROUTES.find((r) => r.id === id) || DEFAULT_ROUTE;
-    if (normalize(window.location.pathname) !== route.path) {
-      window.history.pushState({}, '', route.path);
+    if (readPath() !== route.path) {
+      if (HASH_MODE) {
+        const base = window.location.pathname + window.location.search;
+        window.history.pushState({}, '', `${base}#${route.path}`);
+      } else {
+        window.history.pushState({}, '', route.path);
+      }
     }
     setPath(route.path);
     window.scrollTo({ top: 0, behavior: 'smooth' });

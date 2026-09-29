@@ -16,6 +16,18 @@ Routing is handled by `src/router.js` — a ~90-line History API implementation 
 dependency**, so the demo runs fully offline. It exposes the same `setActivePage('<id>')` contract
 the components already use, which is why no page component needs a router-aware rewrite.
 
+**The router picks its mode automatically.**
+
+| Build | `BASE_URL` | Mode | Deep link looks like |
+|---|---|---|---|
+| `npm run dev` / `npm run build` | `/` | History | `/dashboard` |
+| GitHub Pages deploy | `/<repo>/` | Hash | `/#/dashboard` |
+
+That switch matters. History routing needs a server that rewrites every unknown path to
+`index.html`; GitHub Pages has no such server, so `/dashboard` would 404 on refresh. Detecting the
+sub-path and switching to hash routing means the same build works on any static host, and the
+`public/404.js` shim bounces a hand-typed clean URL into the hash form.
+
 | Path | Page |
 |---|---|
 | `/` | Landing |

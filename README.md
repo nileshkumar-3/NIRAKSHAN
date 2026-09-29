@@ -13,6 +13,14 @@ It is a **prevention, awareness, detection, evidence, and alerting system**. It 
 replacement for police, emergency services, platform moderation, or professional support, and it
 never takes action against another person on your behalf.
 
+### This page is documentation — the app is here
+
+> **Live site:** <https://nileshkumar-3.github.io/NIRAKSHAN/#/demo>
+> The full deployed dashboard. Use **Launch Live Demo** on that page.
+
+The React application lives in [`web/`](web). It is automatically deployed to GitHub Pages on every
+push to `main`, so you can run the whole thing yourself by cloning and typing `npm install`.
+
 ---
 
 ## Table of contents
@@ -126,15 +134,29 @@ nirakshan/
 
 ```bash
 cd web
-npm install     # dependencies are already vendored in this repo
+npm install
 npm run dev     # http://localhost:5173
 ```
 
 Then open **http://localhost:5173/demo** for the judge demo, or
 **http://localhost:5173/dashboard** for the full dashboard.
 
+> `npm install` is required — dependencies are not committed. On a normal
+> connection it takes about a minute; the first `npm run dev` then compiles the app.
+>
 > The web app works with **no backend running**. Every analysis call falls back to clearly
 > labelled simulated data. Check **Settings → Analysis service** to see which mode you are in.
+
+### 1b. Live site
+
+The dashboard is deployed automatically to GitHub Pages on every push to `main` via
+`.github/workflows/deploy.yml`:
+
+**<https://nileshkumar-3.github.io/NIRAKSHAN/>**
+
+The deployed build is mounted at a sub-path, so it switches to hash routing
+(`/#/demo` rather than `/demo`) — that is what makes deep links survive on a
+static host that cannot rewrite URLs to `index.html`.
 
 ### 2. Backend (optional, enables live analysis)
 
