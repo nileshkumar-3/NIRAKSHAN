@@ -2,6 +2,21 @@
 Thumbs.db
 node_modules/
 *.log
+*.pid
+*.err
 .env
 .idea/
 .vscode/
+
+# Python / backend
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.sqlite
+*.db
+
+# Build output
+dist/
+build/
+.expo/

@@ -1,0 +1,89 @@
+/* NIRAKSHAN Shield — advisory banner injected into watchlisted pages only. */
+
+#nirakshan-shield-banner {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  right: 16px;
+  z-index: 2147483647;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  animation: ns-slide-in 0.28s ease-out;
+}
+
+#nirakshan-shield-banner .ns-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: rgba(9, 17, 34, 0.96);
+  border: 1px solid rgba(249, 115, 22, 0.45);
+  box-shadow: 0 18px 50px -12px rgba(0, 0, 0, 0.65);
+  color: #e2e8f0;
+  backdrop-filter: blur(12px);
+}
+
+#nirakshan-shield-banner .ns-badge {
+  flex: 0 0 auto;
+  padding: 4px 9px;
+  border-radius: 8px;
+  background: rgba(249, 115, 22, 0.16);
+  border: 1px solid rgba(249, 115, 22, 0.4);
+  color: #fdba74;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+#nirakshan-shield-banner .ns-copy {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+#nirakshan-shield-banner .ns-copy strong {
+  font-size: 13px;
+  color: #f8fafc;
+}
+
+#nirakshan-shield-banner .ns-copy span {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #94a3b8;
+}
+
+#nirakshan-shield-banner .ns-close {
+  flex: 0 0 auto;
+  border: 0;
+  background: transparent;
+  color: #64748b;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 2px;
+}
+
+#nirakshan-shield-banner .ns-close:hover {
+  color: #e2e8f0;
+}
+
+@keyframes ns-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #nirakshan-shield-banner {
+    animation: none;
+  }
+}

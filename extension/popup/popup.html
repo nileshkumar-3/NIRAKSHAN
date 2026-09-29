@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NIRAKSHAN Shield</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header class="ns-header">
+      <div class="ns-logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+          <path d="m9 12 2 2 4-4" />
+        </svg>
+      </div>
+      <div class="ns-title">
+        <h1>NIRAKSHAN Shield</h1>
+        <p>Digital safety is physical safety.</p>
+      </div>
+    </header>
+
+    <main>
+      <!-- Protection status -->
+      <section class="ns-card ns-status" aria-labelledby="status-heading">
+        <h2 id="status-heading">Protection status</h2>
+        <div class="ns-status-row">
+          <span class="ns-dot" id="status-dot"></span>
+          <span id="status-text">Checking this site…</span>
+        </div>
+      </section>
+
+      <!-- Website risk -->
+      <section class="ns-card" aria-labelledby="risk-heading">
+        <h2 id="risk-heading">Website risk</h2>
+        <p class="ns-site" id="current-domain">—</p>
+        <p class="ns-risk-line" id="risk-line">Scanning…</p>
+        <p class="ns-note" id="risk-note"></p>
+
+        <div class="ns-actions">
+          <button class="ns-btn ns-btn-ghost" id="btn-continue" type="button">Continue</button>
+          <button class="ns-btn ns-btn-warn" id="btn-block" type="button">Block upload</button>
+          <button class="ns-btn ns-btn-ghost" id="btn-report" type="button">Report</button>
+          <button class="ns-btn ns-btn-primary" id="btn-save" type="button">Save evidence</button>
+        </div>
+      </section>
+
+      <!-- Image protection toggle -->
+      <section class="ns-card ns-row-card" aria-labelledby="protect-heading">
+        <div>
+          <h2 id="protect-heading">Protect uploaded images</h2>
+          <p class="ns-note">Warn before any upload on watchlisted sites.</p>
+        </div>
+        <button
+          class="ns-toggle"
+          id="toggle-protect"
+          type="button"
+          role="switch"
+          aria-checked="true"
+          aria-labelledby="protect-heading"
+        >
+          <span class="ns-toggle-knob"></span>
+        </button>
+      </section>
+
+      <!-- Quick scan -->
+      <section class="ns-card" aria-labelledby="scan-heading">
+        <h2 id="scan-heading">Quick scan</h2>
+        <button class="ns-btn ns-btn-primary ns-btn-block" id="btn-scan" type="button">Scan current page</button>
+        <p class="ns-note" id="scan-result" hidden></p>
+      </section>
+
+      <!-- Recent local log -->
+      <section class="ns-card" aria-labelledby="log-heading">
+        <div class="ns-log-head">
+          <h2 id="log-heading">Your action log</h2>
+          <button class="ns-link" id="btn-clear-log" type="button">Clear</button>
+        </div>
+        <ul class="ns-log" id="log-list">
+          <li class="ns-log-empty">No actions recorded yet.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="ns-footer">
+      <p>
+        Prototype. The watchlist is a short, curated demo list — a site that is not listed has
+        <strong>not</strong> been cleared as safe. Nothing you do here replaces police, emergency
+        services, or platform moderation.
+      </p>
+    </footer>
+
+    <script src="popup.js" type="module"></script>
+  </body>
+</html>

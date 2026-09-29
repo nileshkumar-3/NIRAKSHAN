@@ -1,0 +1,333 @@
+/* NIRAKSHAN Shield — popup. Shares the web app's design tokens:
+   dark navy ground, one cyan accent, rounded cards. */
+
+:root {
+  --bg: #060b13;
+  --card: #0a1120;
+  --line: #1e293b;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --accent: #22d3ee;
+  --warn: #f97316;
+  --danger: #e11d48;
+  --ok: #22c55e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 360px;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* ---------------- header ---------------- */
+
+.ns-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  background: linear-gradient(120deg, #0e1a33, #0a1224);
+  border-bottom: 1px solid var(--line);
+}
+
+.ns-logo {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #06b6d4, #4f46e5);
+  color: #fff;
+  flex: 0 0 auto;
+}
+
+.ns-logo svg {
+  width: 18px;
+  height: 18px;
+}
+
+.ns-title h1 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.ns-title p {
+  margin: 0;
+  font-size: 10px;
+  color: var(--muted);
+}
+
+/* ---------------- layout ---------------- */
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px 16px 16px;
+}
+
+.ns-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px 13px;
+}
+
+.ns-card h2 {
+  margin: 0 0 8px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.ns-note {
+  margin: 8px 0 0;
+  font-size: 11px;
+  line-height: 1.5;
+  color: #64748b;
+}
+
+.ns-site {
+  margin: 0;
+  font-family: ui-monospace, "JetBrains Mono", Menlo, monospace;
+  font-size: 12px;
+  color: var(--text);
+  word-break: break-all;
+}
+
+/* ---------------- status ---------------- */
+
+.ns-status-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.ns-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--muted);
+  flex: 0 0 auto;
+}
+
+.ns-dot.is-active {
+  background: var(--ok);
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.15);
+}
+
+.ns-dot.is-warn {
+  background: var(--warn);
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.15);
+}
+
+.ns-dot.is-danger {
+  background: var(--danger);
+  box-shadow: 0 0 0 3px rgba(225, 29, 72, 0.15);
+}
+
+/* ---------------- risk ---------------- */
+
+.ns-risk-line {
+  margin: 8px 0 0;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.risk-NOT_LISTED {
+  color: var(--ok);
+}
+.risk-MEDIUM {
+  color: #eab308;
+}
+.risk-HIGH {
+  color: var(--warn);
+}
+.risk-CRITICAL {
+  color: #fb7185;
+}
+
+/* ---------------- buttons ---------------- */
+
+.ns-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.ns-btn {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 8px 10px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text);
+  background: #0f1b2e;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.ns-btn:hover {
+  background: #16233a;
+  border-color: #334155;
+}
+
+.ns-btn-block {
+  width: 100%;
+}
+
+.ns-btn-primary {
+  background: #0891b2;
+  border-color: #0891b2;
+  color: #fff;
+}
+
+.ns-btn-primary:hover {
+  background: #06b6d4;
+  border-color: #06b6d4;
+}
+
+.ns-btn-warn {
+  background: rgba(249, 115, 22, 0.16);
+  border-color: rgba(249, 115, 22, 0.45);
+  color: #fdba74;
+}
+
+.ns-btn-warn:hover {
+  background: rgba(249, 115, 22, 0.26);
+}
+
+.ns-btn[disabled] {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.ns-link {
+  border: 0;
+  background: none;
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+}
+
+.ns-link:hover {
+  text-decoration: underline;
+}
+
+/* ---------------- toggle ---------------- */
+
+.ns-row-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.ns-row-card h2 {
+  margin-bottom: 2px;
+}
+
+.ns-row-card .ns-note {
+  margin: 0;
+}
+
+.ns-toggle {
+  position: relative;
+  flex: 0 0 auto;
+  width: 42px;
+  height: 24px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: #0f1b2e;
+  cursor: pointer;
+  transition: background 0.18s ease, border-color 0.18s ease;
+}
+
+.ns-toggle[aria-checked="true"] {
+  background: #0891b2;
+  border-color: #0891b2;
+}
+
+.ns-toggle-knob {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #e2e8f0;
+  transition: transform 0.18s ease;
+}
+
+.ns-toggle[aria-checked="true"] .ns-toggle-knob {
+  transform: translateX(18px);
+}
+
+/* ---------------- log ---------------- */
+
+.ns-log-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ns-log {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  max-height: 108px;
+  overflow-y: auto;
+}
+
+.ns-log li {
+  font-size: 11px;
+  color: var(--muted);
+  padding: 6px 8px;
+  border-radius: 8px;
+  background: #0f1b2e;
+  border: 1px solid var(--line);
+}
+
+.ns-log li.ns-log-empty {
+  background: none;
+  border-style: dashed;
+  color: #475569;
+}
+
+/* ---------------- footer ---------------- */
+
+.ns-footer {
+  padding: 10px 16px 14px;
+  border-top: 1px solid var(--line);
+}
+
+.ns-footer p {
+  margin: 0;
+  font-size: 10px;
+  line-height: 1.5;
+  color: #475569;
+}
+
+.ns-footer strong {
+  color: #64748b;
+}

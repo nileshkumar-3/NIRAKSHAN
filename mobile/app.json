@@ -1,0 +1,31 @@
+{
+  "expo": {
+    "name": "NIRAKSHAN",
+    "slug": "nirakshan",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#060B13",
+    "splash": {
+      "backgroundColor": "#060B13",
+      "resizeMode": "contain"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "dev.nirakshan.shield"
+    },
+    "android": {
+      "package": "dev.nirakshan.shield",
+      "adaptiveIcon": {
+        "backgroundColor": "#060B13"
+      }
+    },
+    "web": {
+      "bundler": "metro"
+    },
+    "extra": {
+      "note": "NIRAKSHAN is a prototype. It does not replace emergency services or professional support."
+    }
+  }
+}
